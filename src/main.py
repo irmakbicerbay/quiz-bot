@@ -1,8 +1,7 @@
-def main():
-    print("Hello from quiz-bot!")
+from fastapi import FastAPI
 
-def hello():
-    return "Hello, World!"
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def greet():
+    return {"message": "Hello from Irmak's Quiz Bot!"}
